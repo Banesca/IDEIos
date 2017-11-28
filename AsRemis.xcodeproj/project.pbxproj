@@ -100,7 +100,7 @@
 		A022B0131F7EABAD004388E2 /* ServicesUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesUser.swift; sourceTree = "<group>"; };
 		A022B0161F7EAD93004388E2 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		A022B0191F7EDFE5004388E2 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		A0480BD51F7BFD6800D1AE21 /* AsRemis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsRemis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0480BD51F7BFD6800D1AE21 /* IDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0480BD81F7BFD6800D1AE21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0480BDA1F7BFD6800D1AE21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0480BDD1F7BFD6800D1AE21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		A0480BD61F7BFD6800D1AE21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0480BD51F7BFD6800D1AE21 /* AsRemis.app */,
+				A0480BD51F7BFD6800D1AE21 /* IDE.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -434,9 +434,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0480BD41F7BFD6800D1AE21 /* AsRemis */ = {
+		A0480BD41F7BFD6800D1AE21 /* IDE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0480BEA1F7BFD6800D1AE21 /* Build configuration list for PBXNativeTarget "AsRemis" */;
+			buildConfigurationList = A0480BEA1F7BFD6800D1AE21 /* Build configuration list for PBXNativeTarget "IDE" */;
 			buildPhases = (
 				1881C87D35F1881D67FE2C3C /* [CP] Check Pods Manifest.lock */,
 				A0480BD11F7BFD6800D1AE21 /* Sources */,
@@ -449,9 +449,9 @@
 			);
 			dependencies = (
 			);
-			name = AsRemis;
+			name = IDE;
 			productName = AsRemis;
-			productReference = A0480BD51F7BFD6800D1AE21 /* AsRemis.app */;
+			productReference = A0480BD51F7BFD6800D1AE21 /* IDE.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -485,7 +485,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0480BD41F7BFD6800D1AE21 /* AsRemis */,
+				A0480BD41F7BFD6800D1AE21 /* IDE */,
 			);
 		};
 /* End PBXProject section */
@@ -829,7 +829,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0480BEA1F7BFD6800D1AE21 /* Build configuration list for PBXNativeTarget "AsRemis" */ = {
+		A0480BEA1F7BFD6800D1AE21 /* Build configuration list for PBXNativeTarget "IDE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0480BEB1F7BFD6800D1AE21 /* Debug */,

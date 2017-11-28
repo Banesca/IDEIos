@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var createAccountBtn: UIButton!
+    @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -25,13 +26,12 @@ class LoginViewController: UIViewController {
         asRemisImg.layer.cornerRadius = asRemisImg.frame.width/2
         asRemisImg.clipsToBounds = true
         
-        mailTxtField.text = "cesar@dev.com"
-        passwordTxtField.text = "cesar"
-        
         self.navigationController?.navigationBar.barTintColor = UIColor.BlueIDEHeader
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.hideKeyboardWhenTappedAround()
+        passwordTxtField.delegate = self
+        mailTxtField.delegate = self
         
         let http = Http()
         http.uploadImag(UIImage.init(named: "nopic")!, name: "77DSA.jpg", completion: { (response) -> Void in
@@ -41,6 +41,31 @@ class LoginViewController: UIViewController {
                 print("error on upload complete")
             }
         })
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func keyboardNotification(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
+            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
+            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
+                self.keyboardHeightLayoutConstraint?.constant = 0.0
+            } else {
+                self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 0.0
+            }
+            UIView.animate(withDuration: duration,
+                           delay: TimeInterval(0),
+                           options: animationCurve,
+                           animations: { self.view.layoutIfNeeded() },
+                           completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,5 +150,18 @@ class LoginViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == mailTxtField { // Switch focus to other text field
+            passwordTxtField.becomeFirstResponder()
+        }
+        if textField == passwordTxtField{
+            loginBtn.sendActions(for: .touchUpInside)
+        }
+        return true
     }
 }
