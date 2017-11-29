@@ -15,7 +15,7 @@
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController restorationIdentifier="MenuViewController" storyboardIdentifier="MenuViewController" id="BYZ-38-t0r" customClass="MenuViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MenuViewController" storyboardIdentifier="MenuViewController" id="BYZ-38-t0r" customClass="MenuViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -173,7 +173,7 @@
         <!--User View Controller-->
         <scene sceneID="Te5-KN-LaC">
             <objects>
-                <viewController storyboardIdentifier="UserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kLt-QR-XwL" customClass="UserViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kLt-QR-XwL" customClass="UserViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wNx-4O-5wi"/>
                         <viewControllerLayoutGuide type="bottom" id="1q1-vl-SMn"/>
@@ -381,7 +381,7 @@
         <!--Credit Card View Controller-->
         <scene sceneID="b3J-Rg-rb9">
             <objects>
-                <viewController storyboardIdentifier="CreditCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AqK-BC-zZ4" customClass="CreditCardViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreditCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AqK-BC-zZ4" customClass="CreditCardViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7F-QO-Che"/>
                         <viewControllerLayoutGuide type="bottom" id="f5t-zX-qOh"/>
@@ -432,7 +432,7 @@
         <!--Settings Credit Card View Controller-->
         <scene sceneID="Ypk-gj-7wO">
             <objects>
-                <viewController storyboardIdentifier="SettingsCreditCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JAN-vJ-ZNg" customClass="SettingsCreditCardViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsCreditCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JAN-vJ-ZNg" customClass="SettingsCreditCardViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mRk-ua-cRX"/>
                         <viewControllerLayoutGuide type="bottom" id="bXZ-y1-VBF"/>
@@ -693,7 +693,7 @@
         <!--Count State View Controller-->
         <scene sceneID="QXQ-K7-7d8">
             <objects>
-                <viewController storyboardIdentifier="CountStateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KVR-rF-wC9" customClass="CountStateViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountStateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KVR-rF-wC9" customClass="CountStateViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hnd-Lv-cB8"/>
                         <viewControllerLayoutGuide type="bottom" id="aUa-3d-SHS"/>
@@ -855,7 +855,7 @@
         <!--Chat View Controller-->
         <scene sceneID="K06-vw-nol">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ib1-HP-qTH" customClass="ChatViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ib1-HP-qTH" customClass="ChatViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hPY-es-JBi"/>
                         <viewControllerLayoutGuide type="bottom" id="Axh-oP-Fkz"/>
@@ -890,7 +890,7 @@
         <!--Get Ride View Controller-->
         <scene sceneID="DQb-e5-f6Z">
             <objects>
-                <viewController storyboardIdentifier="GetRideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hsf-Bg-UaM" customClass="GetRideViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetRideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hsf-Bg-UaM" customClass="GetRideViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bEb-dD-1V6"/>
                         <viewControllerLayoutGuide type="bottom" id="Xys-Kc-KWs"/>
@@ -1130,7 +1130,7 @@
         <!--History View Controller-->
         <scene sceneID="UdW-o7-D1l">
             <objects>
-                <viewController storyboardIdentifier="HistoryViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b6U-z0-hjt" customClass="HistoryViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b6U-z0-hjt" customClass="HistoryViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fJ4-ut-lMO"/>
                         <viewControllerLayoutGuide type="bottom" id="HhD-EM-Jjp"/>
@@ -1335,7 +1335,7 @@
         <!--Notifications View Controller-->
         <scene sceneID="NkK-xM-j6L">
             <objects>
-                <viewController storyboardIdentifier="NotificationsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sbS-kY-9ld" customClass="NotificationsViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sbS-kY-9ld" customClass="NotificationsViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uzz-Ul-kxb"/>
                         <viewControllerLayoutGuide type="bottom" id="mez-8Y-Qg4"/>
@@ -1467,7 +1467,7 @@
         <!--Request View Controller-->
         <scene sceneID="XDi-xp-nco">
             <objects>
-                <viewController storyboardIdentifier="RequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sVk-ef-hDG" customClass="RequestViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sVk-ef-hDG" customClass="RequestViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cne-6B-Aho"/>
                         <viewControllerLayoutGuide type="bottom" id="vBd-oL-fAo"/>
@@ -1502,7 +1502,7 @@
         <!--Report Fix View Controller-->
         <scene sceneID="8V0-sy-Ola">
             <objects>
-                <viewController storyboardIdentifier="ReportFixViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="es1-aA-pDJ" customClass="ReportFixViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportFixViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="es1-aA-pDJ" customClass="ReportFixViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i8t-0L-vGZ"/>
                         <viewControllerLayoutGuide type="bottom" id="7fk-xu-eaQ"/>
@@ -1613,7 +1613,7 @@
         <!--Login View Controller-->
         <scene sceneID="6Yd-GO-G2j">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pS2-q5-Yz5" customClass="LoginViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pS2-q5-Yz5" customClass="LoginViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EKq-HH-o40"/>
                         <viewControllerLayoutGuide type="bottom" id="VH4-uD-HfV"/>
@@ -1722,7 +1722,7 @@
         <!--Select User View Controller-->
         <scene sceneID="BRZ-cm-f2O">
             <objects>
-                <viewController storyboardIdentifier="SelectUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FCd-PP-WMd" customClass="SelectUserViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FCd-PP-WMd" customClass="SelectUserViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3es-r6-FZr"/>
                         <viewControllerLayoutGuide type="bottom" id="5ZW-6r-raO"/>
@@ -1840,7 +1840,7 @@
         <!--Create User View Controller-->
         <scene sceneID="ogB-zf-f8f">
             <objects>
-                <viewController storyboardIdentifier="CreateUserViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ple-wQ-kgR" customClass="CreateUserViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateUserViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ple-wQ-kgR" customClass="CreateUserViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ne3-CJ-s96"/>
                         <viewControllerLayoutGuide type="bottom" id="0e4-OS-suW"/>
@@ -2016,7 +2016,7 @@
         <!--Services Active View Controller-->
         <scene sceneID="p8d-od-uOH">
             <objects>
-                <viewController storyboardIdentifier="ServicesActiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v2j-JX-e7F" customClass="ServicesActiveViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServicesActiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v2j-JX-e7F" customClass="ServicesActiveViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Iw-xA-TLA"/>
                         <viewControllerLayoutGuide type="bottom" id="73v-bs-pep"/>
@@ -2107,7 +2107,7 @@
         <!--Services Actions Detail View Controller-->
         <scene sceneID="doG-F1-DCN">
             <objects>
-                <viewController storyboardIdentifier="ServicesActionsDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mTo-SH-eW3" customClass="ServicesActionsDetailViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServicesActionsDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mTo-SH-eW3" customClass="ServicesActionsDetailViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hT0-W0-H3k"/>
                         <viewControllerLayoutGuide type="bottom" id="yoE-Fe-Yd1"/>
@@ -2240,7 +2240,7 @@
         <!--Make Reservation View Controller-->
         <scene sceneID="dX6-f0-P0r">
             <objects>
-                <viewController storyboardIdentifier="MakeReservationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kc9-Ib-9F0" customClass="MakeReservationViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MakeReservationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kc9-Ib-9F0" customClass="MakeReservationViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n7S-f2-IL7"/>
                         <viewControllerLayoutGuide type="bottom" id="nkz-zu-DLQ"/>
@@ -2431,7 +2431,7 @@
         <!--Request Services View Controller-->
         <scene sceneID="gNt-7q-4zv">
             <objects>
-                <viewController storyboardIdentifier="RequestServicesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pDH-80-oGb" customClass="RequestServicesViewController" customModule="AsRemis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RequestServicesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pDH-80-oGb" customClass="RequestServicesViewController" customModule="IDE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceC-0O-xEU"/>
                         <viewControllerLayoutGuide type="bottom" id="Wmz-f7-fci"/>

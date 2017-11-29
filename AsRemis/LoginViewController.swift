@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import NVActivityIndicatorView
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, NVActivityIndicatorViewable{
 
     @IBOutlet weak var asRemisImg: UIImageView!
     @IBOutlet weak var mailTxtField: UITextField!
@@ -33,14 +34,9 @@ class LoginViewController: UIViewController {
         passwordTxtField.delegate = self
         mailTxtField.delegate = self
         
-        let http = Http()
-        http.uploadImag(UIImage.init(named: "nopic")!, name: "77DSA.jpg", completion: { (response) -> Void in
-            if response!{
-                print("upload complete Img")
-            }else{
-                print("error on upload complete")
-            }
-        })
+        mailTxtField.text = "cesar@dev.com"
+        passwordTxtField.text = "cesar"
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
@@ -76,7 +72,10 @@ class LoginViewController: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         let user = UserEntity.init(userName: mailTxtField.text!, userPass: passwordTxtField.text!, idTypeAuth: 2)
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.checkVersion(SingletonsObject.sharedInstance.appCurrentVersion as String, completion: { (isValidVersion) -> Void in
+            self.stopAnimating()
             if isValidVersion{
                 http.loginUser(user, completion: { (userJson) -> Void in
                     if userJson != nil && userJson?.user?.emailUser != ""{
@@ -116,7 +115,9 @@ class LoginViewController: UIViewController {
         let token = TokenEntity.init(tokenFB: "", idUser: (user.user?.idUser)!, idDriver: driverId, latVersionApp: SingletonsObject.sharedInstance.appCurrentVersion as String)
         
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.getToken(token, completion: { (isValidToken) -> Void in
+            self.stopAnimating()
             if isValidToken{
                 //SocketServices().prepareSocket(GlobalMembers().masterIp, userId: (user.user?.idUser)!, urlBase: GlobalMembers().urlDeveloper)
             }else{

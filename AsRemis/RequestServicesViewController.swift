@@ -9,13 +9,14 @@
 import UIKit
 import GooglePlaces
 import CoreLocation
+import NVActivityIndicatorView
 
 protocol RequestServicesDelegate {
     func hideRequest()
     func increaseHeightOfRequestView(_ increase: Bool)
 }
 
-class RequestServicesViewController: UIViewController {
+class RequestServicesViewController: UIViewController, NVActivityIndicatorViewable {
 
     @IBOutlet weak var searchImg: UIImageView!
     @IBOutlet weak var searchPlaceBtn: UIButton!
@@ -164,7 +165,9 @@ class RequestServicesViewController: UIViewController {
 extension RequestServicesViewController{
     func getVehicleType(){
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.fleetType({(fleets) -> Void in
+            self.stopAnimating()
             for fleet in fleets!{
                 self.optionsVehicles.append(fleet)
                 if self.fleetSelected.vehiclenType == ""{
