@@ -34,8 +34,6 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable{
         passwordTxtField.delegate = self
         mailTxtField.delegate = self
         
-        mailTxtField.text = "cesar@dev.com"
-        passwordTxtField.text = "cesar"
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
