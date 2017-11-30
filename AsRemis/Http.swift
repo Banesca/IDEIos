@@ -16,6 +16,7 @@ class Http {
     func loginUser(_ user:UserEntity, completion:@escaping (UserFullEntity?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("auth")
@@ -73,6 +74,7 @@ class Http {
     func updateClientLiteMobil(_ profile:UserProfileEntity, completion:@escaping (UserProfileEntity?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("auth/updateClientLiteMobil")
@@ -102,6 +104,7 @@ extension Http{
     func checkVersion(_ version: String, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("auth/checkVersion/\(version)")
@@ -124,6 +127,7 @@ extension Http{
     func failReport(_ report:ReporteEntity, completion:@escaping (ReporteEntity?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("support/add")
@@ -149,6 +153,7 @@ extension Http{
     func getToken(_ token:TokenEntity, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("auth/token")
@@ -175,6 +180,7 @@ extension Http{
     func getNotification(_ notificationId: String, completion:@escaping ([NotificationEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("notifications/find/\(notificationId)")
@@ -209,6 +215,7 @@ extension Http{
     func readNotification(Id notificationId:NSNumber, userId:NSNumber, completion:@escaping ([NotificationEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("notifications/read/\(notificationId)/\(userId)")
@@ -250,6 +257,7 @@ extension Http{
     func addTravel(_ token:TravelEntity, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/add")
@@ -277,6 +285,7 @@ extension Http{
     func travelsByIdUser(_ userId: String, completion:@escaping ([InfoTravelEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/travelsByIdUser/\(userId)")
@@ -312,6 +321,7 @@ extension Http{
     func sendPosition(_ token:TokenEntity, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/sendPosition")
@@ -336,6 +346,7 @@ extension Http{
     func infoTravelByDriver(_ token:TokenEntity, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/infoTravelByDriver")
@@ -360,6 +371,7 @@ extension Http{
     func isRoundTrip(Id tripId:NSNumber, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/isRoundTrip/\(tripId)")
@@ -382,6 +394,7 @@ extension Http{
     func isWait(Id waitTd:NSNumber, value:String, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/isWait/\(waitTd)/\(value)")
@@ -404,6 +417,7 @@ extension Http{
     func finishPost(_ token:TokenEntity, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/finishMobil")
@@ -428,6 +442,7 @@ extension Http{
     func preFinishMobil(_ token:TokenEntity, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/preFinishMobil")
@@ -452,6 +467,7 @@ extension Http{
     func accept(Id travelId:NSNumber, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/accept/\(travelId)")
@@ -475,6 +491,7 @@ extension Http{
     func refuse(Id travelId:NSNumber, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/refuse/\(travelId)")
@@ -498,6 +515,7 @@ extension Http{
     func initTrip(Id travelId:NSNumber, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/init/\(travelId)")
@@ -521,6 +539,7 @@ extension Http{
     func getReservations(_ driverId: NSNumber, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/rservations/\(driverId)")
@@ -544,6 +563,7 @@ extension Http{
     func readReservation(Id travelId:NSNumber, driverId: NSNumber, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/readrservations/\(travelId)/\(driverId)")
@@ -570,6 +590,7 @@ extension Http{
     func cacelReservation(Id travelId:NSNumber, driverId: NSNumber, completion:@escaping ([InfoTravelEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/cacelReservation/\(travelId)/\(driverId)")
@@ -602,6 +623,7 @@ extension Http{
     func cancelByClient(Id travelId:String, idReasonCancelKf: String, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/cancelByClient/\(travelId)/\(idReasonCancelKf)")
@@ -624,6 +646,7 @@ extension Http{
     func obtIdMotivo(completion:@escaping ([ReasonEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("travel/reason")
@@ -658,6 +681,7 @@ extension Http {
     func getAllTravel(_ driverId: String, completion:@escaping ([InfoTravelEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("driver/getAllTravel/\(driverId)")
@@ -699,6 +723,7 @@ extension Http {
     func inactive(Id driverId:Int, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("driver/inactive/\(driverId)")
@@ -721,6 +746,7 @@ extension Http {
     func active(Id driverId:Int, completion:@escaping (Bool) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("driver/active/\(driverId)")
@@ -741,6 +767,7 @@ extension Http {
     func listLiquidationDriver(_ driverId: String, completion:@escaping (listLiquidationDriverEntity?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("invoice/listLiquidationDriver/\(driverId)")
@@ -783,6 +810,7 @@ extension Http {
     func brand(_ completion:@escaping ([BrandEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("Brand")
@@ -812,6 +840,7 @@ extension Http {
     func fleetType(_ completion:@escaping ([FleetTypeEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("fleetType")
@@ -841,6 +870,7 @@ extension Http {
     func byidBrand(_ brandId: String, completion:@escaping ([ModelByBrand]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("model/byidBrand/\(brandId)")
@@ -892,6 +922,7 @@ extension Http {
     func addPluDriver(_ user:UserCreateEntity, fleet: FleetTypeEntity, completion:@escaping (Bool?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("driver/plusLite")
@@ -916,6 +947,7 @@ extension Http {
     func addClient(_ user:UserCreateEntity, completion:@escaping (Bool?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("client")
@@ -943,6 +975,7 @@ extension Http {
     func validatorDomaint(_ mail:String, completion:@escaping ([EnterpriceEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("company/validatorDomaint/\(mail)")
@@ -976,6 +1009,7 @@ extension Http {
     func getAcountByidCompany(_ idEnterprice:String, completion:@escaping ([CompanyAcountEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("company/getAcountByidCompany/\(idEnterprice)")
@@ -1006,6 +1040,7 @@ extension Http {
     func costCenterByidAcount(_ idCompany:String, completion:@escaping ([CenterAcountEntity]?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("company/costCenterByidAcount/\(idCompany)")
@@ -1037,6 +1072,7 @@ extension Http{
     func addPlusDriverIDE(_ user:UserCreateEntity, fleet: FleetIDEEntity, completion:@escaping (NSNumber?) -> Void){
         if !isConnectedToInternet(){
             showInternetError()
+            completion(nil)
             return
         }
         let url = GlobalMembers().urlDeveloper.appending("driver/plusLite")
@@ -1065,6 +1101,7 @@ extension Http{
         
         if !isConnectedToInternet(){
             showInternetError()
+            completion(false)
             return
         }
         let url = GlobalMembers().masterIp.appending("/developer/Frond/safeimgDriver.php")

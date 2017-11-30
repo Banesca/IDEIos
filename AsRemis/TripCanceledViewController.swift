@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 protocol TripCanceledDelegate {
     func hideCanceledView()
 }
-class TripCanceledViewController: UIViewController {
+class TripCanceledViewController: UIViewController, NVActivityIndicatorViewable {
 
     @IBOutlet weak var reasonTableView: UITableView!
     @IBOutlet weak var messageTitleLbl: UILabel!
@@ -38,7 +39,9 @@ class TripCanceledViewController: UIViewController {
     
     func getReasons(){
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.obtIdMotivo(completion:  { (response) -> Void in
+            self.stopAnimating()
             for reason in response!{
                 self.reasons.append(reason)
             }
@@ -50,7 +53,9 @@ class TripCanceledViewController: UIViewController {
         let idClient = (SingletonsObject.sharedInstance.userSelected?.user?.idClient?.stringValue)!
         let reasonSelected = reasons[indexSelected]
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.cancelByClient(Id: idClient, idReasonCancelKf: (reasonSelected.idReason?.stringValue)!, completion: { (response) -> Void in
+            self.stopAnimating()
             self.dismiss(animated: true, completion: nil)
             self.delegate?.hideCanceledView()
         })

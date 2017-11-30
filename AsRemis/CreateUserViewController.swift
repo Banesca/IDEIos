@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class CreateUserViewController: UIViewController{
+class CreateUserViewController: UIViewController, NVActivityIndicatorViewable{
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var nextQuestionBtn: UIButton!
@@ -100,9 +101,9 @@ class CreateUserViewController: UIViewController{
             statusInfoArr.append(["title":"Cadastro de veículos","information":""])
             statusInfoArr.append(["title":"Confirmar","information":""])
             
-            submenuInfoArr.append(["title":"Categoría","information":"Seleccionar"])
-            submenuInfoArr.append(["title":"Marca","information":"Seleccionar"])
-            submenuInfoArr.append(["title":"Modelo","information":"Seleccionar"])
+            submenuInfoArr.append(["title":"Categoría","information":"Selecione"])
+            submenuInfoArr.append(["title":"Marca","information":"Selecione"])
+            submenuInfoArr.append(["title":"Modelo","information":"Selecione"])
             
             driverInfo.setValue("", forKey: "dEmail")
             driverInfo.setValue("", forKey: "dPass")
@@ -149,7 +150,6 @@ class CreateUserViewController: UIViewController{
     
     
     func createUser(){
-        let http = Http.init()
         if isDriver{
             let driver = UserCreateEntity.init(clientWith: (driverInfo.value(forKey: "dName") as? String)!,
                                                lastName: (driverInfo.value(forKey: "dLastname") as? String)!,
@@ -180,7 +180,10 @@ class CreateUserViewController: UIViewController{
             fleet.idVeichleBrandAsigned = brandSelected.idVehicleBrand
             fleet.policyNumber = (driverInfo.value(forKey: "vPolicy") as? String)!
             
+            let http = Http.init()
+            startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
             http.addPlusDriverIDE(driver, fleet: fleet, completion: { (response) -> Void in
+                self.stopAnimating()
                 if (response?.intValue ?? 0) > 0 {
                     let idDriver = "\(response!.intValue)"
                     http.uploadImag((self.driverInfo.value(forKey: "dProfileImg") as? UIImage)!,
@@ -266,10 +269,12 @@ extension CreateUserViewController{
 //MARK: Methods for clientWS
 extension CreateUserViewController{
     func validateMail(){
-        let http = Http.init()
         let email = statusInfoArr[3]["information"]! as String
         if (email.count > 5) {
+            let http = Http.init()
+            startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
             http.validatorDomaint(email, completion: { (enterprices) -> Void in
+                self.stopAnimating()
                 if enterprices != nil{
                     for enterprice in enterprices!{
                         self.optionsMenu4.append(enterprice)
@@ -282,7 +287,9 @@ extension CreateUserViewController{
     func getCompaniesFor(enterprice:EnterpriceEntity){
         self.enterprice = enterprice
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.getAcountByidCompany(enterprice.idCompanyClient!, completion: { (companies) -> Void in
+            self.stopAnimating()
             if companies != nil{
                 for company in companies!{
                     self.optionsMenu5.append(company)
@@ -294,7 +301,9 @@ extension CreateUserViewController{
     func getCostFor(company:CompanyAcountEntity){
         self.company = company
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.costCenterByidAcount(company.idCompanyAcount!, completion: { (costs) -> Void in
+            self.stopAnimating()
             if costs != nil{
                 for cost in costs!{
                     self.optionsMenu6.append(cost)
@@ -309,7 +318,9 @@ extension CreateUserViewController{
 extension CreateUserViewController{
     func getBOInfoForDriver(){
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.brand({ (brands) -> Void in
+            self.stopAnimating()
             if brands != nil{
                 for brand in brands!{
                     self.optionsMenu2.append(brand)
@@ -319,9 +330,12 @@ extension CreateUserViewController{
     }
     
     func getBrandModel(brand:BrandEntity){
+        modelSelected = ModelByBrand()
         brandSelected = brand
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.byidBrand(brand.idVehicleBrand!, completion: {(models) -> Void in
+            self.stopAnimating()
             if models != nil{
                 for model in models!{
                     self.optionsMenu3.append(model)
@@ -332,7 +346,9 @@ extension CreateUserViewController{
     
     func getFleetType(){
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.fleetType({(fleets) -> Void in
+            self.stopAnimating()
             if fleets != nil{
                 for fleet in fleets!{
                     self.optionsMenu1.append(fleet)
@@ -697,7 +713,9 @@ extension CreateUserViewController: AlertPickerDelegate{
             case 2:
                 getBrandModel(brand: optionsMenu2[index])
                 driverInfo.setValue(optionsMenu2[index].nameVehicleBrand, forKey: "vBrand")
+                driverInfo.setValue("Selecione", forKey: "vModel")
                 submenuInfoArr[0]["information"] = optionsMenu2[index].nameVehicleBrand
+                submenuInfoArr[1]["information"] = "Selecione"
                 break
             default:
                 modelSelected = optionsMenu3[index]

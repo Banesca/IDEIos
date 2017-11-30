@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1D9B993224C0B11784167E /* Pods_IDE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C264039692C7BE36473E0C38 /* Pods_IDE.framework */; };
 		A006ED311F9560730040D835 /* GlobalMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006ED301F9560730040D835 /* GlobalMembers.swift */; };
 		A01DFBE21F83FAD600DAC0CE /* AsRemis+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DFBE11F83FAD600DAC0CE /* AsRemis+UIColor.swift */; };
 		A022B0111F7EAB77004388E2 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = A022B0101F7EAB77004388E2 /* Http.swift */; };
@@ -93,6 +94,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38BAA4B761152BA2F6915414 /* Pods-IDE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDE/Pods-IDE.debug.xcconfig"; sourceTree = "<group>"; };
+		8E581DE78221BCBF75F883A4 /* Pods-IDE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDE.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDE/Pods-IDE.release.xcconfig"; sourceTree = "<group>"; };
 		92845C2F5D36D6419039FEE4 /* Pods-AsRemis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsRemis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsRemis/Pods-AsRemis.debug.xcconfig"; sourceTree = "<group>"; };
 		A006ED301F9560730040D835 /* GlobalMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMembers.swift; sourceTree = "<group>"; };
 		A01DFBE11F83FAD600DAC0CE /* AsRemis+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AsRemis+UIColor.swift"; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 		A0C670CF1F99495C00050882 /* PlaceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
 		A0C670D31F99BB2400050882 /* ReasonEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonEntity.swift; sourceTree = "<group>"; };
 		A0C670D51F9A62CF00050882 /* InfoTravelEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTravelEntity.swift; sourceTree = "<group>"; };
+		C264039692C7BE36473E0C38 /* Pods_IDE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0D81D81FC72F72007EF6CA /* FleetTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetTypeEntity.swift; sourceTree = "<group>"; };
 		ED0D81DA1FC77298007EF6CA /* CompanyAcountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyAcountEntity.swift; sourceTree = "<group>"; };
 		ED0D81DC1FC78029007EF6CA /* EnterpriceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriceEntity.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC440AEADFAF59B212EC898B /* Pods_AsRemis.framework in Frameworks */,
+				2C1D9B993224C0B11784167E /* Pods_IDE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE6DA9BFFDFA21D989B10CB /* Pods_AsRemis.framework */,
+				C264039692C7BE36473E0C38 /* Pods_IDE.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -418,6 +424,8 @@
 			children = (
 				92845C2F5D36D6419039FEE4 /* Pods-AsRemis.debug.xcconfig */,
 				EEE88B7117D729141A8BA4CB /* Pods-AsRemis.release.xcconfig */,
+				38BAA4B761152BA2F6915414 /* Pods-IDE.debug.xcconfig */,
+				8E581DE78221BCBF75F883A4 /* Pods-IDE.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -534,7 +542,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AsRemis-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-IDE-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -547,18 +555,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AsRemis/Pods-AsRemis-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-IDE/Pods-IDE-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/YPDrawSignatureView/YPDrawSignatureView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPDrawSignatureView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsRemis/Pods-AsRemis-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IDE/Pods-IDE-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3184163F9F84DD27591C5578 /* [CP] Copy Pods Resources */ = {
@@ -567,7 +577,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AsRemis/Pods-AsRemis-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-IDE/Pods-IDE-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -577,7 +587,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsRemis/Pods-AsRemis-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IDE/Pods-IDE-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -779,7 +789,7 @@
 		};
 		A0480BEB1F7BFD6800D1AE21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92845C2F5D36D6419039FEE4 /* Pods-AsRemis.debug.xcconfig */;
+			baseConfigurationReference = 38BAA4B761152BA2F6915414 /* Pods-IDE.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -799,7 +809,7 @@
 		};
 		A0480BEC1F7BFD6800D1AE21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEE88B7117D729141A8BA4CB /* Pods-AsRemis.release.xcconfig */;
+			baseConfigurationReference = 8E581DE78221BCBF75F883A4 /* Pods-IDE.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

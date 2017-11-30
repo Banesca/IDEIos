@@ -8,12 +8,13 @@
 
 import UIKit
 import GooglePlaces
+import NVActivityIndicatorView
 
 protocol MakeReservationDelegate {
     func hideReservation()
 }
 
-class MakeReservationViewController: UIViewController {
+class MakeReservationViewController: UIViewController, NVActivityIndicatorViewable {
 
     @IBOutlet weak var originTxtField: UITextField!
     @IBOutlet weak var originBtn: UIButton!
@@ -155,7 +156,9 @@ class MakeReservationViewController: UIViewController {
 extension MakeReservationViewController{
     func getVehicleType(){
         let http = Http.init()
+        startAnimating(CGSize.init(width: 50, height: 50), message: "Espere um momento", messageFont: UIFont.boldSystemFont(ofSize: 12), type: .ballRotate, color: .white, padding: 0.0, displayTimeThreshold: 10, minimumDisplayTime: 2, backgroundColor: .GrayAlpha, textColor: .white)
         http.fleetType({(fleets) -> Void in
+            self.stopAnimating()
             for fleet in fleets!{
                 self.optionsVehicles.append(fleet)
                 if self.fleetSelected.vehiclenType == ""{
